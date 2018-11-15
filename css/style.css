@@ -48,6 +48,7 @@ Designed by:  Dang Yen
 
 body, html {
   height: 100%;
+  font-family: 'Montserrat-Regular', sans-serif;
 }
 
 h4{
@@ -89,9 +90,10 @@ button:focus,
     box-shadow: none !important;
 }
 
+
 .navbar-nav .nav-link{
   color: rgb(247, 247, 247);
-  text-transform: uppercase;
+  margin-right: 1rem;
 }
 
 .navbar-nav .nav-link:hover,
@@ -104,6 +106,8 @@ button:focus,
 }
 
 .dropdown-menu{
+  margin-top: .75rem !important;
+  border-radius: 0 !important;
   border: 1px solid #d8d8d8;
   padding: 0 1rem;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -165,36 +169,43 @@ button:focus,
 
 
 /*---Header---*/
+.header-menu{
+  margin-left: 2rem;
+}
+
 .search-area .btn{
   border-top-left-radius: 20px !important;
   border-bottom-left-radius: 20px !important;
-  background-color: #333333;
+  background-color: #424242;
   color: #ffffff;
 }
 
 .search-area input{
-  border-color: #333333 !important;
+  border-color: #424242 !important;
   border-top-right-radius: 20px !important;
   border-bottom-right-radius: 20px !important;
-  background-color: #333333 !important;
+  background-color: #424242 !important;
   color: #ffffff !important;
   padding-left: 0 !important;
+}
+
+.search-area input:focus,
+.search-area input.focus,
+.search-area input.active.focus,
+.search-area input.active:focus,
+.search-area input:active.focus,
+.search-area input:active:focus{
+  outline: 0 !important;
+  outline-color: transparent !important;
+  outline-width: 0 !important;
+  outline-style: none !important;
+  box-shadow: none !important;
 }
 
 .search-area input::placeholder{
   color: #979797;
   font-size: 13px;
   font-style: italic;
-}
-
-.menu-mobile{
-  display: none;
-}
-
-.header-right{
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
 }
 
 .cart-noti, .cart-noti-mobile{
@@ -241,6 +252,10 @@ button:focus,
   font-family: sans-serif;
 }
 
+.account-setting-mobile{
+  display: none;
+}
+
 .setting-dropdown{
   margin-top: .65rem !important;
   border-radius: 0 !important;
@@ -284,8 +299,15 @@ button:focus,
 }
 
 @media (max-width: 768px){
-  .menu-mobile{
-    display: flex;
+  .header-menu{
+    margin-left: auto;
+  }
+  .dropdown-menu{
+    border-radius: .25rem !important;
+    margin-top: .125rem !important;
+  }
+  .account-setting-mobile{
+    display: block;
   }
   .navbar-brand > img{
     height: 30px;
