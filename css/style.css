@@ -128,8 +128,21 @@ button:focus,
   background-color: transparent;
 }
 
-.carousel-indicators{
-  
+.carousel-indicators .active{
+ background-color: black !important;
+}
+
+.carousel-indicators > li{
+  opacity: .5;
+  width: .65rem !important;
+  height: .65rem !important;
+  border-radius: 50%;
+  background-color: white !important;
+  border: .5px solid black !important;
+}
+
+.carousel-indicators > li:hover{
+  opacity: 1;
 }
 /*---------------------------------------------------*/
 
