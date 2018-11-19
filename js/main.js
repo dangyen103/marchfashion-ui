@@ -1,6 +1,121 @@
 
-// Custome carousel
+// Custome slick carousel
+    $('.slick-carousel1').slick({
+        dots: false,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        infinite: true,
+        autoplay: false,
+        autoplaySpeed: 6000,
+        arrows: true,
+        appendArrows: $('.slick-carousel1'),
+        prevArrow:'<button class="arrow-slick prev-slick"><i class="fa  fa-angle-left" aria-hidden="true"></i></button>',
+        nextArrow:'<button class="arrow-slick next-slick"><i class="fa  fa-angle-right" aria-hidden="true"></i></button>',
+        responsive: [
+            {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+            }
+            },
+            {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+            },
+            {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
 
+    $('.slick-carousel2').slick({
+        dots: false,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        infinite: true,
+        autoplay: false,
+        autoplaySpeed: 6000,
+        arrows: true,
+        appendArrows: $('.slick-carousel2'),
+        prevArrow:'<button class="arrow-slick prev-slick"><i class="fa  fa-angle-left" aria-hidden="true"></i></button>',
+        nextArrow:'<button class="arrow-slick next-slick"><i class="fa  fa-angle-right" aria-hidden="true"></i></button>',
+        responsive: [
+            {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+            }
+            },
+            {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+            },
+            {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
+
+    $('.slick-carousel3').slick({
+        dots: false,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        infinite: true,
+        autoplay: false,
+        autoplaySpeed: 6000,
+        arrows: true,
+        appendArrows: $('.slick-carousel3'),
+        prevArrow:'<button class="arrow-slick prev-slick"><i class="fa  fa-angle-left" aria-hidden="true"></i></button>',
+        nextArrow:'<button class="arrow-slick next-slick"><i class="fa  fa-angle-right" aria-hidden="true"></i></button>',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
+    });
 
 
 // -----------------------------------------------
