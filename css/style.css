@@ -20,6 +20,11 @@ Designed by:  Dang Yen
 }
 
 @font-face {
+  font-family: Montserrat-SemiBold;
+  src: url('../fonts/montserrat/Montserrat-SemiBold.ttf'); 
+}
+
+@font-face {
   font-family: Montserrat-Bold;
   src: url('../fonts/montserrat/Montserrat-Bold.ttf'); 
 }
@@ -49,6 +54,7 @@ Designed by:  Dang Yen
 body, html {
   height: 100%;
   font-family: 'Montserrat-Regular', sans-serif;
+  background-color: #f7f7f7;
 }
 
 h3{
@@ -75,8 +81,8 @@ a:hover{
 -----------------------------------------------------------------------------------*/
 .container-fluid {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
   margin-right: auto;
   margin-left: auto;
 }
@@ -171,6 +177,10 @@ button:focus,
   margin-top: 2rem;
 }
 
+.mb-30{
+  margin-bottom: 30px;
+}
+
 .cl-white{
   color: white;
 }
@@ -179,12 +189,25 @@ button:focus,
   color: black;
 }
 
+.bg-white{
+  background-color:  white;
+}
+
 .bg-black{
   background-color: black;
 }
 
+.bg-tranf{
+  background-color: transparent !important;
+}
+
 .bg-light-gray{
   background-color: #FAFAFA;
+}
+
+.bg-dark-gray{
+  /* background-color: #f0f0f0; */
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .txt-upc{
@@ -200,6 +223,17 @@ button:focus,
 .header-menu{
   margin-left: 2rem;
 }
+
+.fixed {
+  position: fixed;
+  z-index: 99999;
+  background-color: #0b9386;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.2s top cubic-bezier(.3,.73,.3,.74);
+}
+
 
 .search-area .btn{
   border-top-left-radius: 20px !important;
@@ -301,6 +335,64 @@ button:focus,
   justify-content: flex-end;
 }
 
+/* ---Header Side on Mobile---- */
+.overlay,
+.sideMenu{
+	position:fixed;
+	bottom:0;
+}
+
+.overlay{
+	top:0;left:-100%;
+	right:100%;
+	margin:auto;
+	background-color:rgba(0,0,0,.5);
+	z-index:99998;
+	transition:all ease 0.2s;
+}
+
+.overlay.open{
+	left:0;
+	right:0;
+}
+
+.sidebarNavigation{
+	margin-bottom: 0;
+	z-index: 99999;
+	justify-content: flex-start;
+}
+
+.sidebarNavigation .leftNavbarToggler{
+	margin-right: 10px;
+	order: -1;
+}
+
+.sideMenu{
+	left: -100%;
+	top: 52px;
+	transition: all ease 0.5s;
+	overflow: hidden;
+	width: 100%;
+	z-index: 99999;
+	max-width: 80%;
+	margin-bottom: 0;
+	padding: 1rem;
+}
+
+.sideMenu.open{
+	left: 0;
+	display: block;
+	overflow-y: auto;
+}
+
+.sideMenu ul{
+	margin: 0;
+	padding: 0 15px;
+}
+/* --------------- */
+
+
+
 /* ================================================= */
 /*----------CONTENT-----------*/
 /* ================================================ */
@@ -310,7 +402,7 @@ button:focus,
   position: relative;
   height: 100%;
   overflow: hidden;
-  box-shadow: 0 0 0.5rem rgba(0,0,0,.25);
+  /* box-shadow: 0 0 0.5rem rgba(0,0,0,.2); */
   background-color: #ffffff;
   border-radius: 0.2rem;
 }
@@ -351,14 +443,14 @@ button:focus,
 
 .tag-new{
   position: absolute;
-  z-index: 11232;
+  z-index: 100;
   top: 5px;
   left: 5px;
 }
 
 .tag-sale{
   position: absolute;
-  z-index: 11232;
+  z-index: 100;
   top: 5px;
   right: 5px;
   text-shadow: 0 0 8px rgb(255, 251, 0);
@@ -420,7 +512,7 @@ button:focus,
 
 .card-add-to-cart{
   position: absolute;
-  z-index: 12948;
+  z-index: 100;
   bottom: -10%;
   opacity: 0;
   width: 100%;
@@ -495,7 +587,7 @@ button:focus,
   height: 100%;
   background-color: #ffffff;
   border-radius: .2rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  /* box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2); */
 }
 
 .post-card-info{
@@ -516,7 +608,7 @@ button:focus,
 @media (max-width: 992px) {
   .post-card-info{
     position: absolute;
-    z-index: 12323;
+    z-index: 100;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
   }
@@ -527,8 +619,114 @@ button:focus,
     color: #cccccc;
   }
 }
-
 /* ----------------------- */
+
+
+/* ----prod-banner--- */
+.prod-banner {
+  /* width: 100%; */
+}
+/* ---------------- */
+
+
+/* -----Breadcrumb---- */
+.breadcrumb{
+  border-radius: 0 !important;
+  padding: .5rem .75rem !important;
+  margin: 0 !important;
+}
+
+.breadcrumb li {
+  font-size: .75rem;
+}
+
+.breadcrumb li a{
+  font-size: .75rem;
+  color: #666666;
+}
+
+.breadcrumb li a:hover{
+  text-decoration: underline;
+}
+
+.breadcrumb li span{
+  padding-left: .375rem;
+  padding-right: .375rem;
+}
+/* ------------------ */
+
+
+/* -------Left sidebar-------- */
+.left-sidebar{
+  
+}
+
+.left-nav-fixed{
+  position: fixed;
+  z-index: 100;
+  overflow-x: hidden;
+}
+
+.nav-list-group{
+  list-style-type: none;
+  margin: 0;
+  padding-top: 0;
+  padding-bottom: 1rem;
+  /* background-color: #fafafa; */
+}
+
+.nav-list-title{
+  padding-bottom: .5rem;
+  font-size: 1rem;
+  font-family: 'Montserrat-Bold', serif;
+}
+
+.nav-list-item{
+  padding: .5rem 0;
+}
+
+.nav-list-item:hover{
+  background-color: #f0f0f0;
+  font-family: 'Montserrat-SemiBold', serif;
+  border-left: 3px solid #FF9900;
+  padding-left: 1rem;
+}
+
+/* .nav-list-item:hover a{
+  color: #FF9900;
+} */
+
+.nav-list-item a {
+  color: #000000;
+}
+
+.nav-sublist-group{
+  list-style-type: none;
+}
+.nav-sublist-group > li{
+  font-size: .9rem;
+  padding: .5rem 0 0 1rem;
+}
+/* --------------------------- */
+
+/* -----Sort by------- */
+.sort-by-group{
+  padding-left: 0;
+  background-color: white;
+  border-radius: .2rem;
+  margin-bottom: 30px;
+}
+.sort-by-group > li{
+  color: #000000;
+  padding: 10px 15px;
+  font-size: .9rem;
+}
+.sort-by-group > li.sort-by-name:hover{
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+/* ------------- */
+
 
 
 /* ============================================================ */
@@ -542,8 +740,17 @@ button:focus,
   background-color: black;
 }
 
+.home-title-post::after{
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 2px;
+  background-color: #fafafa;
+}
 
-
+.home-title-post{
+  color: #fafafa;
+}
 
 /* ============================================================ */
 /*-----------FOOTER------------*/
@@ -571,7 +778,7 @@ footer{
   content: "";
   display: block;
   height: 1px;
-  width: 90%;
+  width: 100%;
   background-color: #666666;
   margin-top: .5rem;
   margin-bottom: 1rem;
@@ -618,7 +825,7 @@ footer{
   position: fixed;
   bottom: 20px;
   right: 30px;
-  z-index: 99;
+  z-index: 99999;
   border: 2px solid #000000;
   outline: none;
   padding: 0 !important;
@@ -643,7 +850,7 @@ footer{
 
 .cut-icon{
   position: absolute;
-  z-index: 12324;
+  z-index: 101;
   right: 0;
   top: -1rem;
 }
@@ -651,11 +858,14 @@ footer{
 
 
 /*----Responsive----*/
-@media (max-width: 992px){
-  
+@media (max-width: 1199px){
+  .px-15{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
-@media (min-width: 992px){
+@media (max-width: 992px){
   
 }
 
@@ -663,35 +873,52 @@ footer{
   .header-menu{
     margin-left: auto;
   }
+
   .dropdown-menu{
     border-radius: .25rem !important;
     margin-top: .125rem !important;
   }
+
   .account-setting-mobile{
     display: block;
   }
+
   .navbar-brand > img{
     height: 30px;
   }
+
   .navbar-collapse{
     margin-top: .5rem;
     padding-top: .5rem;
     border-top: 1px solid #333333;
   }
+
   .header-right{
     display: flex;
     width: auto;
     justify-content: flex-start;
   }
+
   .cart-noti{
     display: none;
   }
+
   .cart-noti-mobile{
     display: flex;
   }
+
   .account-setting{
     display: none;
   }
+
+  .left-sidebar{
+    display: none;
+  }
+
+}
+
+@media (max-width: 576px){
+
 }
 
 @media (min-width: 1200px) {
@@ -716,9 +943,17 @@ footer{
     flex: 0 0 20%;
     max-width: 20%;
   }
+
+  .col-lg-8-5 {
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
   .navbar{
     padding: .5rem 0 !important;
   }
+
   .footer-row {
     display: flex;
   }
