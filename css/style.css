@@ -979,6 +979,27 @@ button:focus,
 /* ----------- */
 
 
+/* ================================= */
+/* ---------POST DETAIL---------- */
+/* ================================= */
+.post-detail{
+  background-color: #fff;
+  margin-left: 0;
+  margin-right: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-radius: .2rem;
+}
+
+.post-detail-title h3{
+  text-align: center;
+  margin-bottom: 1rem;
+}
+/* ----------------------- */
+
+
+
+
 /* ============================================================ */
 /*-----------FOOTER------------*/
 /* ============================================================= */
