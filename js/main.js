@@ -158,13 +158,47 @@ function myFunction() {
 
 
 
+// ---------------------------------------------------
+// Add cart alert
+// ---------------------------------------
+$('.add-cart-alert').on('click', function(e){
+    e.preventDefault();
+});
+
+$('.add-cart-alert').each(function(){
+    // var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+    var idProduct = $(this).parent().parent().parent().find('.prod-card-id').html();
+    $(this).on('click', function(){
+        swal(idProduct, "đã được thêm vào giỏ !", "success");
+    });
+});
+
+// Product Detail 
+$('.btn-add-to-card').on('click', function(e){
+    e.preventDefault();
+});
+
+$('.btn-add-to-card').each(function(){
+    // var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+    var idProduct = $(this).parent().parent().parent().find('.prod-detail-id').html();
+    $(this).on('click', function(){
+        swal(idProduct, "đã được thêm vào giỏ !", "success");
+    });
+});
+
+// ---------------------------------------------------
+
+
+
 // --------------------------------------------------------------
 // *[ +/- num product ]
 // --------------------------------------------------------------
 $('.btn-num-product-down').on('click', function(e){
     e.preventDefault();
     var numProduct = Number($(this).next().val());
-    if(numProduct > 1) $(this).next().val(numProduct - 1);
+    if(numProduct > 1) {
+        $(this).next().val(numProduct - 1);
+    }
 });
 
 $('.btn-num-product-up').on('click', function(e){
