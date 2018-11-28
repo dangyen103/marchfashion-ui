@@ -1462,6 +1462,55 @@ button:focus,
 
 
 /* ============================================================ */
+/*-----------USER ACCOUNT------------*/
+/* ============================================================= */
+/* --------account-info------- */
+.account-info{
+  font-size: .9rem;
+  background-color: #fff;
+  border-radius: .2rem;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.account-item-label{
+  font-size: .75rem;
+  color: #666666;
+  margin-bottom: .5rem;
+}
+
+.btn-account-info-edit{
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 576px){
+  .btn-account-info-edit{
+    justify-content: center;
+  }
+}
+
+.btn-account-info-edit a{
+  background-color: #444444;
+  font-family: 'Montserrat-SemiBold', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: .2rem;
+  padding: .5rem 1rem;
+}
+
+.btn-account-info-edit a:hover,
+.btn-account-info-edit a:focus{
+  background-color: #000;
+}
+/* ---------------- */
+
+/* -------------------------------------------- */
+
+
+
+
+/* ============================================================ */
 /*-----------FOOTER------------*/
 /* ============================================================= */
 footer{
