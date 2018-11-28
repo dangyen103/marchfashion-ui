@@ -1606,6 +1606,10 @@ footer{
   position: relative;
 }
 
+.footer-card{
+  width: 100%;
+}
+
 .dash-boder{
   border-top: 2px solid #ffffff;
   border-bottom: 0;

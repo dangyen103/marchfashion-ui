@@ -1,3 +1,11 @@
+// ------------Custome Home Top Carousel-----------------
+$('.carousel').carousel({
+    interval: 4000
+  })
+// -----------------------------------
+
+
+
 // ----------------------------------------------
 // Fixed Header When Scrolling
 window.onscroll = function() {myFunction()};
